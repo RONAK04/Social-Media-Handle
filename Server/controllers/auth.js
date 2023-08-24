@@ -61,11 +61,3 @@ export const login = async (req, res) => {
     res.status(500).json({ error: err.message });
   }
 };
-
-
-        // const savedUserResponse = await axios.post(
-        //     "http://192.168.1.21:5000/auth/register",values,
-        //     {
-        //         headers: { "Content-Type": "multipart/form-data" },
-        //     }
-        // ).then(

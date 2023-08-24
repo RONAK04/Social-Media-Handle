@@ -68,7 +68,7 @@ const Form = () => {
             {
                 method: "POST",
                 headers: { "Content-Type": "multipart/form-data" },
-                body : formData
+                body : JSON.stringify(formData)
             }
         );
         // body: JSON.stringify(values),
