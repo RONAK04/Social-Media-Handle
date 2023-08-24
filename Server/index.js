@@ -28,14 +28,15 @@ app.use(helmet.crossOriginResourcePolicy({ policy: "cross-origin" }));
 app.use(morgan("common"));
 app.use(bodyParser.json({ limit: "30mb", extended: true }));
 app.use(bodyParser.urlencoded({ limit: "30mb", extended: true }));
-app.use(
-  cors({
-    origin: ["https://social-media-handle-8sii.vercel.app"],
-    // origin: "*",
-    // methods: ["POST", "GET", "PATCH"],
-    credentials: true,
-  })
-);
+// app.use(
+//   cors({
+//     origin: ["https://social-media-handle-8sii.vercel.app"],
+//     // origin: "*",
+//     // methods: ["POST", "GET", "PATCH"],
+//     credentials: true,
+//   })
+// );
+app.options("*", cors());
 app.use(express.json());
 app.use("/assets", express.static(path.join(__dirname, "public/assets")));
 // app.use("/uploads", express.static(path.join(__dirname, "public/uploads")));
