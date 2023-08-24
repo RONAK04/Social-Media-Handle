@@ -67,7 +67,7 @@ const Form = () => {
             "https://social-media-handle.vercel.app/auth/register",
             {
                 method: "POST",
-                // headers: { "Content-Type": "multipart/form-data" },
+                headers: { "Content-Type": "multipart/form-data" },
                 body : formData
             }
         );
