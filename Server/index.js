@@ -66,10 +66,12 @@ app.use("/auth", authRoutes);
 app.use("/users", userRoutes);
 app.use("/posts", postRoutes);
 
-app.get("/", (req, res) => {
+app.get("/123", (req, res) => {
   res.json("Hello");
 });
+
 app.get("/demo", (req, res) => {
+    console.log("12344")
   res.json("Hello Demo");
 });
 
