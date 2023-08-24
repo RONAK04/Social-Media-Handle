@@ -2,5 +2,6 @@
   "version": 2,
   "name": "Social-Media-handle",
   "builds": [{ "src": "*.js", "use": "@vercel/node" }],
-  "routes": [{ "src": "/(.*)", "dest": "/app.js" }]
+  "routes": [{ "src": "/(.*)", "dest": "/index.js" }]
+ 
 }
