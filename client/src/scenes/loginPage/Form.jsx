@@ -64,7 +64,7 @@ const Form = () => {
         formData.append("picturePath", values.picture);
 
         const savedUserResponse = await fetch(
-            "http://192.168.1.21:5000/auth/register",
+            "https://social-media-handle.vercel.app/auth/register",
             {
                 method: "POST",
                 // headers: { "Content-Type": "multipart/form-data" },
@@ -83,7 +83,7 @@ const Form = () => {
     };
 
     const login = async (values, onSubmitProps) => {
-        const loggedInResponse = await fetch("http://192.168.1.21:5000/auth/login", {
+        const loggedInResponse = await fetch("https://social-media-handle.vercel.app/auth/login", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(values),

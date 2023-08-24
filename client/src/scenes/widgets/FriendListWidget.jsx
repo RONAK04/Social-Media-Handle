@@ -13,7 +13,7 @@ const FriendListWidget = ({ userId }) => {
 
   const getFriends = async () => {
     const response = await fetch(
-      `http://192.168.1.21:5000/users/${userId}/friends`,
+      `https://social-media-handle.vercel.app/users/${userId}/friends`,
       {
         method: "GET",
         headers: { Authorization: `${token}` },

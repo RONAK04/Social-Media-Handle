@@ -8,7 +8,7 @@ const UserImage = ({ image, size = "60px" }) => {
         width={size}
         height={size}
         alt="user"
-        src={`http://192.168.1.21:5000/assets/${image}`}
+        src={`https://social-media-handle.vercel.app/assets/${image}`}
       />
     </Box>
   );

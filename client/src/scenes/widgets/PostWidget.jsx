@@ -35,7 +35,7 @@ import {
     const primary = palette.primary.main;
   
     const patchLike = async () => {
-      const response = await fetch(`http://192.168.1.21:5000/posts/${postId}/like`, {
+      const response = await fetch(`https://social-media-handle.vercel.app/posts/${postId}/like`, {
         method: "PATCH",
         headers: {
           Authorization: `${token}`,
@@ -64,7 +64,7 @@ import {
             height="auto"
             alt="post"
             style={{ borderRadius: "0.75rem", marginTop: "0.75rem" }}
-            src={`http://192.168.1.21:5000/assets/${picturePath}`}
+            src={`https://social-media-handle.vercel.app/assets/${picturePath}`}
           />
         )}
         <FlexBetween mt="0.25rem">

@@ -46,7 +46,7 @@ const MyPostWidget = ({ picturePath }) => {
             formData.append("picturePath", image.name);
         }
 
-        const response = await fetch(`http://192.168.1.21:5000/posts`, {
+        const response = await fetch(`https://social-media-handle.vercel.app/posts`, {
             method: "POST",
             headers: { Authorization: `${token}` },
             body: formData,

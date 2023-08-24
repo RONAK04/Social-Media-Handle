@@ -15,7 +15,7 @@ const ProfilePage = () => {
   const isNonMobileScreens = useMediaQuery("(min-width:1000px)");
 
   const getUser = async () => {
-    const response = await fetch(`http://192.168.1.21:5000/users/${userId}`, {
+    const response = await fetch(`https://social-media-handle.vercel.app/users/${userId}`, {
       method: "GET",
       headers: { Authorization: `${token}` },
     });

@@ -9,7 +9,7 @@ const PostsWidget = ({ userId, isProfile = false }) => {
   const token = useSelector((state) => state.token);
 
   const getPosts = async () => {
-    const response = await fetch("http://192.168.1.21:5000/posts", {
+    const response = await fetch("https://social-media-handle.vercel.app/posts", {
       method: "GET",
       headers: { Authorization: `${token}` },
     });
@@ -19,7 +19,7 @@ const PostsWidget = ({ userId, isProfile = false }) => {
 
   const getUserPosts = async () => {
     const response = await fetch(
-      `http://192.168.1.21:5000/posts/${userId}/posts`,
+      `https://social-media-handle.vercel.app/posts/${userId}/posts`,
       {
         method: "GET",
         headers: { Authorization: `${token}` },
