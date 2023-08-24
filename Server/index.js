@@ -69,6 +69,9 @@ app.use("/posts", postRoutes);
 app.get("/", (req, res) => {
   res.json("Hello");
 });
+app.get("/demo", (req, res) => {
+  res.json("Hello Demo");
+});
 
 const PORT = process.env.PORT || 5000;
 mongoose
