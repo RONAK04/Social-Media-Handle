@@ -36,7 +36,14 @@ app.use(bodyParser.urlencoded({ limit: "30mb", extended: true }));
 //     credentials: true,
 //   })
 // );
-app.options("*", cors());
+app.use(
+  cors({
+    origin: "https://social-media-handle-8sii.vercel.app", // Change this to your frontend's URL
+    methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
+    credentials: true,
+  })
+);
+// app.options("*", cors());
 app.use(express.json());
 app.use("/assets", express.static(path.join(__dirname, "public/assets")));
 // app.use("/uploads", express.static(path.join(__dirname, "public/uploads")));
