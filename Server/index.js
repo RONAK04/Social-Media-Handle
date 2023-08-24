@@ -32,7 +32,7 @@ app.use(
   cors({
     origin: ["https://social-media-handle-8sii.vercel.app"],
     // origin: "*",
-    methods: ["POST", "GET", "PATCH"],
+    // methods: ["POST", "GET", "PATCH"],
     credentials: true,
   })
 );
