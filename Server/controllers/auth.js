@@ -4,10 +4,7 @@ import User from "../models/User.js";
 
 export const register = async (req, res) => {
   // console.log("============+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++",req)
-  console.log("=====body====================>>>>",req.body)
-  console.log("========file1===================>>>",req.file)
-  console.log("========file2===================>>>",req.files)
-  console.log("========file3===================>>>",req.files[0].path)
+ 
   try {
     const {
       firstName,

@@ -23,7 +23,7 @@ const registerSchema = yup.object().shape({
     password: yup.string().required("required"),
     location: yup.string().required("required"),
     occupation: yup.string().required("required"),
-    picture: yup.string().required("required"),
+    // picture: yup.string().required("required"),
 });
 
 const loginSchema = yup.object().shape({
@@ -38,7 +38,7 @@ const initialValuesRegister = {
     password: "",
     location: "",
     occupation: "",
-    picture: "",
+    // picture: "",
 };
 
 const initialValuesLogin = {
@@ -61,10 +61,10 @@ const Form = () => {
         for (let value in values) {
             formData.append(value, values[value]);
         }
-        formData.append("picturePath", values.picture);
+        // formData.append("picturePath", values.picture);
 
         const savedUserResponse = await fetch(
-            "https://social-media-handle.vercel.app/auth/register",
+            "http://localhost:5000/auth/register",
             {
                 method: "POST",
                 // headers: { "Content-Type": "multipart/form-data" },
@@ -119,7 +119,7 @@ const Form = () => {
                 handleBlur,
                 handleChange,
                 handleSubmit,
-                setFieldValue,
+                // setFieldValue,
                 resetForm,
             }) => (
                 <form onSubmit={handleSubmit}>
@@ -177,13 +177,13 @@ const Form = () => {
                                     helperText={touched.occupation && errors.occupation}
                                     sx={{ gridColumn: "span 4" }}
                                 />
-                                <Box
+                                {/* <Box
                                     gridColumn="span 4"
                                     border={`1px solid ${palette.neutral.medium}`}
                                     borderRadius="5px"
                                     p="1rem"
                                 >
-                                    {/* <Dropzone
+                                    <Dropzone
                                         acceptedFiles=".jpg,.jpeg,.png"
                                         multiple={false}
                                         onDrop={(acceptedFiles) =>
@@ -208,8 +208,8 @@ const Form = () => {
                                                 )}
                                             </Box>
                                         )}
-                                    </Dropzone> */}
-                                </Box>
+                                    </Dropzone>
+                                </Box> */}
                             </>
                         )}
 
