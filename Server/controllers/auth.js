@@ -19,8 +19,7 @@ export const register = async (req, res) => {
       location,
       occupation,
     } = req.body;
-    console.log("first", req.file);
-
+    console.log(req.body)
     // const salt = await bcrypt.genSalt();
     const passwordHash = await bcrypt.hash(password, 10);
 
@@ -29,7 +28,7 @@ export const register = async (req, res) => {
       lastName,
       email,
       password: passwordHash,
-      picturePath : req.files[0].filename,
+      // picturePath : req.files[0].filename,
       // picturePath,
 
       friends,

@@ -38,7 +38,7 @@ app.use(bodyParser.urlencoded({ limit: "30mb", extended: true }));
 // );
 app.use(
   cors({
-    origin: "https://social-media-handle-8sii.vercel.app", // Change this to your frontend's URL
+    origin: "*", // Change this to your frontend's URL
     methods: "GET,HEAD,PUT,PATCH,POST,DELETE,OPTION",
     credentials: true,
   })
