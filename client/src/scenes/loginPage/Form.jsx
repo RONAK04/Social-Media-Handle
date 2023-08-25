@@ -64,7 +64,7 @@ const Form = () => {
         // formData.append("picturePath", values.picture);
 
         const savedUserResponse = await fetch(
-            "http://localhost:5000/auth/register",
+            "https://social-media-handle.vercel.app/auth/register",
             {
                 method: "POST",
                 // headers: { "Content-Type": "multipart/form-data" },
